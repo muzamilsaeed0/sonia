@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portfolio – Sonia Rani</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700;1,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --slate:#2f3d45;
+    --slate-dark:#222d33;
+    --teal:#1f6f8b;
+    --text:#1d1d1d;
+    --muted:#555;
+    --bg:#ffffff;
+    --card:#f4f8fa;
+    --accent:#c0504d;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Lato',system-ui,sans-serif;color:var(--text);background:var(--bg);line-height:1.7;font-size:18px}
+  img{max-width:100%;display:block}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:10;background:var(--slate-dark);display:flex;gap:6px;justify-content:center;flex-wrap:wrap;padding:10px}
+  nav a{color:#dfe9ee;text-decoration:none;font-weight:700;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:20px}
+  nav a:hover{background:var(--teal);color:#fff}
+
+  /* HERO */
+  .hero{
+    background:
+      linear-gradient(115deg,rgba(255,255,255,.04) 0 30%,transparent 30% 60%,rgba(255,255,255,.05) 60% 100%),
+      linear-gradient(160deg,#222d33,#3a4a53);
+    min-height:260px;display:flex;align-items:center;padding:40px 6vw;
+  }
+  .hero h1{color:#fff;font-style:italic;font-weight:900;font-size:clamp(40px,9vw,84px);letter-spacing:.03em}
+
+  .wrap{max-width:900px;margin:0 auto;padding:0 20px}
+  section{padding:50px 0}
+
+  /* PHOTO */
+  .photo{margin:40px auto 0;max-width:900px;padding:0 20px}
+  .photo img,.photo .ph{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  .ph{background:linear-gradient(135deg,#cfdde4,#e8f0f3);display:flex;align-items:center;justify-content:center;color:var(--teal);font-weight:900;font-size:90px;font-style:italic}
+
+  h2.sec{color:var(--teal);font-size:clamp(34px,7vw,48px);font-weight:900;letter-spacing:.02em;margin-bottom:24px}
+  .intro dl{display:grid;grid-template-columns:max-content 1fr;gap:10px 26px;font-size:22px}
+  .intro dt{font-weight:900}
+  .intro dd{font-weight:400}
+
+  .center-title{text-align:center;font-style:italic;font-weight:900;font-size:clamp(30px,7vw,56px);line-height:1.25;margin:20px 0}
+
+  /* PRACTICAL BLOCKS */
+  .poster{margin:30px 0}
+  .poster img,.poster .ph2{width:100%;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.15)}
+  .ph2{aspect-ratio:3/4;background:var(--card);border:3px dashed #9db8c4;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;color:var(--teal);font-weight:700;font-size:20px}
+
+  h3.topic{font-size:clamp(32px,7vw,52px);font-weight:900;margin:34px 0 18px}
+  h4{font-size:clamp(22px,4.6vw,28px);font-weight:900;margin:34px 0 12px}
+  p{margin-bottom:14px}
+  ul,ol{margin:0 0 14px 26px}
+  li{margin-bottom:10px}
+  li::marker{color:var(--text)}
+
+  .diagram{margin:30px 0;background:#fff;border:1px solid #e1e8ec;border-radius:8px;padding:10px}
+  .diagram svg{width:100%;height:auto}
+  .caption{text-align:center;color:var(--muted);font-size:15px;margin-top:6px}
+
+  table{border-collapse:collapse;width:100%;margin:10px 0 20px;font-size:16px}
+  th,td{border:1px solid #d5e0e5;padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:var(--teal);color:#fff}
+  tr:nth-child(even) td{background:var(--card)}
+  .scroll{overflow-x:auto}
+
+  .note{background:var(--card);border-left:5px solid var(--teal);padding:14px 18px;border-radius:4px;margin:20px 0}
+
+  footer{background:var(--slate-dark);color:#cdd9df;text-align:center;padding:26px 16px;font-size:15px;margin-top:40px}
+  hr.div{border:none;border-top:2px solid #e1e8ec;margin:20px 0}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#top">Home</a>
+  <a href="#intro">Introduction</a>
+  <a href="#practical1">Practical 1</a>
+  <a href="#practical2">Practical 2</a>
+</nav>
+
+<header class="hero" id="top">
+  <h1>PORTFOLIO</h1>
+</header>
+
+<!-- PHOTO: apni photo ka naam photo.jpg rakh kar isi folder mein daal dein -->
+<div class="photo">
+  <img src="photo.jpg" alt="Sonia Rani"
+       onerror="this.outerHTML='<div class=&quot;ph&quot;>SR</div>'">
+</div>
+
+<main class="wrap">
+
+  <!-- INTRODUCTION -->
+  <section id="intro" class="intro">
+    <h2 class="sec">INTRODUCTION</h2>
+    <dl>
+      <dt>Name :</dt>
+      <dd>Sonia Rani</dd>
+      <dt>Roll Number :</dt>
+      <dd>SU91-BMITM-F25-044</dd>
+      <dt>Department :</dt>
+      <dd>Medical Imaging Technology</dd>
+    </dl>
+  </section>
+
+  <hr class="div">
+
+  <div class="center-title">PRACTICAL<br>DEMONSTRATION</div>
+
+  <!-- PRACTICAL 1 -->
+  <section id="practical1">
+    <div class="center-title">PRACTICAL 1</div>
+
+    <!-- POSTER: apna poster poster.jpg naam se isi folder mein daal dein -->
+    <div class="poster">
+      <img src="poster.jpg" alt="Practical 1 project poster"
+           onerror="this.outerHTML='<div class=&quot;ph2&quot;>Yahan apna Practical 1 poster lagayein<br>(file ka naam: poster.jpg)</div>'">
+    </div>
+
+    <h3 class="topic">School Adoption Program</h3>
+    <p>
+      The image presents a project poster for the <strong>School Adoption Program</strong> (School Adoption Plan), built around the idea <em>"Adopt • Support • Empower"</em>. It outlines a social entrepreneurship concept developed under the Superior University, CMACED, SEP and Active Citizens programs, with the message <strong>"Better Schools, Brighter Futures."</strong>
+    </p>
+
+    <h4>Core Concept and Problem Statement</h4>
+    <ul>
+      <li><strong>The Challenge:</strong> Many local schools suffer from poor infrastructure and facilities, a shortage of resources, and limited access to quality education.</li>
+      <li><strong>The Solution:</strong> Adopt a school and improve its facilities, provide teaching support and educational resources, and organise educational programs for students.</li>
+    </ul>
+
+    <h4>Implementation and Target Audience</h4>
+    <ul>
+      <li><strong>Target Community:</strong> Local schools in need of support, especially underprivileged schools with poor infrastructure and limited resources.</li>
+      <li><strong>Beneficiaries:</strong> Approximately <strong>100 to 500+ students</strong>.</li>
+      <li><strong>Action Plan (8 Weeks):</strong>
+        <ul style="margin-top:10px">
+          <li><strong>Weeks 1–2 – Assessment &amp; Planning:</strong> Survey the school's needs and create a detailed plan.</li>
+          <li><strong>Weeks 3–4 – Support &amp; Improvement:</strong> Improve infrastructure such as classrooms, electricity and furniture.</li>
+          <li><strong>Weeks 5–6 – Education Drive:</strong> Conduct teaching sessions, skill workshops and awareness programs.</li>
+          <li><strong>Weeks 7–8 – Review &amp; Impact Check:</strong> Evaluate progress and ensure long-term support.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4>Infrastructure Improvements</h4>
+    <ul>
+      <li><strong>Upgrade School Facilities:</strong> Classrooms, library, sanitation and more.</li>
+      <li><strong>Provide Teaching Support:</strong> Qualified educators and educational resources.</li>
+    </ul>
+
+    <h4>Benefits and Expected Impact</h4>
+    <ul>
+      <li><strong>Benefits:</strong> Quality education for every child, a better future for the community, and skill development and confidence in students.</li>
+      <li><strong>Expected Impact:</strong> Improved learning environment, higher academic performance, increased school enrolment, and a brighter future for children.</li>
+    </ul>
+
+    <h4>Economic Model and Long-Term Vision</h4>
+    <ul>
+      <li><strong>Estimated Project Cost:</strong> PKR 50,000 – 100,000.</li>
+      <li><strong>Long-Term Vision:</strong> A well-equipped, high-performing school; an educated and empowered community; and a more equal and skilled society.</li>
+    </ul>
+
+    <h4>Alignment with UN Sustainable Development Goals (SDGs)</h4>
+    <ul>
+      <li><strong>SDG 4 (Quality Education):</strong> Improves access to quality education through better facilities and teaching support.</li>
+      <li><strong>SDG 17 (Partnerships for the Goals):</strong> Builds partnerships between the university, community and schools to achieve shared goals.</li>
+    </ul>
+  </section>
+
+  <hr class="div">
+
+  <!-- PRACTICAL 2 : STOMACH -->
+  <section id="practical2">
+    <div class="center-title">PRACTICAL 2</div>
+
+    <div class="diagram">
+      <svg viewBox="0 0 700 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Labelled diagram of the stomach">
+        <defs>
+          <linearGradient id="stom" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f1a89c"/>
+            <stop offset="1" stop-color="#d9786c"/>
+          </linearGradient>
+          <linearGradient id="duo" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" stop-color="#e8b84a"/>
+            <stop offset="1" stop-color="#d9a132"/>
+          </linearGradient>
+        </defs>
+        <rect width="700" height="520" fill="#fff"/>
+
+        <!-- esophagus -->
+        <path d="M284 12 L326 12 L326 70 C326 95 322 110 318 128 L290 128 C288 105 284 90 284 70 Z"
+              fill="#e59a8c" stroke="#7a3a31" stroke-width="3"/>
+        <!-- stomach -->
+        <path d="M318 126
+                 C336 200 360 290 430 342
+                 C470 372 510 378 545 366
+                 L545 424
+                 C480 446 430 452 380 462
+                 C290 470 230 450 185 396
+                 C128 330 108 222 148 152
+                 C180 100 250 80 290 126 Z"
+              fill="url(#stom)" stroke="#7a3a31" stroke-width="4" stroke-linejoin="round"/>
+        <!-- rugae (internal folds) -->
+        <g fill="none" stroke="#fbd5cc" stroke-width="5" stroke-linecap="round" opacity=".85">
+          <path d="M175 200 C220 230 260 250 300 300"/>
+          <path d="M160 250 C215 280 255 310 300 360"/>
+          <path d="M175 310 C225 340 270 370 330 405"/>
+          <path d="M215 365 C270 395 330 415 400 420"/>
+          <path d="M240 160 C265 190 295 215 330 255"/>
+        </g>
+        <!-- pyloric sphincter -->
+        <rect x="545" y="364" width="24" height="62" rx="6" fill="#a8473b" stroke="#7a3a31" stroke-width="3"/>
+        <!-- duodenum -->
+        <path d="M569 366 L640 366 C668 366 676 392 676 410 C676 440 660 450 640 450 L569 424 Z"
+              fill="url(#duo)" stroke="#7a5a12" stroke-width="3" stroke-linejoin="round"/>
+
+        <!-- label lines & text -->
+        <g stroke="#222" stroke-width="2" fill="none">
+          <path d="M400 50 L330 52"/>
+          <path d="M400 104 L324 120"/>
+          <path d="M440 200 L352 232"/>
+          <path d="M165 108 L205 128"/>
+          <path d="M128 262 L150 262"/>
+          <path d="M150 335 L215 335"/>
+          <path d="M130 428 L205 420"/>
+          <path d="M556 468 L556 428"/>
+          <path d="M630 330 L630 366"/>
+        </g>
+        <g font-family="Lato, sans-serif" font-size="21" fill="#111">
+          <text x="408" y="56">Esophagus</text>
+          <text x="408" y="110">Cardia</text>
+          <text x="448" y="206">Lesser curvature</text>
+          <text x="20"  y="112" font-weight="700">Fundus</text>
+          <text x="20"  y="268" font-weight="700">Body</text>
+          <text x="20"  y="341">Rugae</text>
+          <text x="10"  y="446">Greater curvature</text>
+          <text x="476" y="494" font-weight="700">Pylorus</text>
+          <text x="590" y="322">Duodenum</text>
+        </g>
+      </svg>
+      <p class="caption">Figure: Labelled diagram of the stomach (Fundus, Body, Pylorus, curvatures and rugae)</p>
+    </div>
+
+    <h3 class="topic">STOMACH</h3>
+
+    <p>
+      The <strong>stomach</strong> is a J-shaped, hollow, muscular organ located in the upper left part of your abdomen, just below the diaphragm. It sits between the esophagus and the small intestine. Its main role in the digestive system is to <strong>store food, churn it, and begin the digestion of proteins</strong>.
+    </p>
+
+    <h4>Anatomy and Location</h4>
+    <ul>
+      <li><strong>Location:</strong> It lies in the left upper abdomen (epigastric and left hypochondriac regions), partly covered by the rib cage and the left lobe of the liver. When moderately full it holds about 1 litre, and it can stretch to hold much more after a large meal.</li>
+      <li><strong>Structure:</strong> The stomach is divided into four main regions:
+        <ul style="margin-top:10px">
+          <li><strong>Cardia:</strong> The small area around the opening where the esophagus enters the stomach.</li>
+          <li><strong>Fundus:</strong> The rounded, dome-shaped upper part that sits above the cardia and often holds swallowed air.</li>
+          <li><strong>Body:</strong> The largest, central section where most of the churning and mixing happens.</li>
+          <li><strong>Pylorus:</strong> The funnel-shaped lower part (antrum and pyloric canal) that leads into the duodenum.</li>
+        </ul>
+      </li>
+      <li><strong>Curvatures:</strong> The short, concave right border is the <em>lesser curvature</em>, and the long, convex left border is the <em>greater curvature</em>.</li>
+      <li><strong>Sphincters:</strong> The lower esophageal sphincter guards the entrance, and the pyloric sphincter controls the exit into the small intestine.</li>
+    </ul>
+
+    <h4>Layers of the Stomach Wall</h4>
+    <div class="scroll">
+      <table>
+        <tr><th>Layer</th><th>Function</th></tr>
+        <tr><td>Mucosa</td><td>Innermost layer with gastric glands and folds called rugae; secretes mucus, acid and enzymes.</td></tr>
+        <tr><td>Submucosa</td><td>Connective tissue carrying blood vessels, lymphatics and nerves.</td></tr>
+        <tr><td>Muscularis externa</td><td>Three muscle layers (oblique, circular, longitudinal) that churn and mix food.</td></tr>
+        <tr><td>Serosa</td><td>Thin outer covering that reduces friction with nearby organs.</td></tr>
+      </table>
+    </div>
+
+    <h4>How It Works in Digestion</h4>
+    <ol>
+      <li><strong>Reception and Storage:</strong> Swallowed food enters through the lower esophageal sphincter. The stomach relaxes and stretches to hold it.</li>
+      <li><strong>Mechanical Digestion:</strong> Strong muscle contractions (peristaltic waves) churn the food and mix it with gastric juice into a thick, semi-liquid mixture called <strong>chyme</strong>.</li>
+      <li><strong>Chemical Digestion:</strong> Parietal cells release <strong>hydrochloric acid (HCl)</strong>, which creates a strongly acidic environment and kills most bacteria. Chief cells release <strong>pepsinogen</strong>, which the acid converts into <strong>pepsin</strong>, an enzyme that starts breaking down proteins.</li>
+      <li><strong>Protection:</strong> Mucous cells produce a thick layer of mucus so the stomach does not digest itself.</li>
+      <li><strong>Emptying:</strong> The pyloric sphincter releases small amounts of chyme into the duodenum, where digestion and absorption continue.</li>
+    </ol>
+
+    <h4>Key Secretions</h4>
+    <div class="scroll">
+      <table>
+        <tr><th>Cell / Hormone</th><th>Product</th><th>Role</th></tr>
+        <tr><td>Parietal cells</td><td>HCl, intrinsic factor</td><td>Acidity; intrinsic factor helps absorb vitamin B12</td></tr>
+        <tr><td>Chief cells</td><td>Pepsinogen</td><td>Becomes pepsin to digest proteins</td></tr>
+        <tr><td>Mucous cells</td><td>Mucus and bicarbonate</td><td>Protect the stomach lining</td></tr>
+        <tr><td>G cells</td><td>Gastrin</td><td>Stimulates acid secretion and stomach movement</td></tr>
+      </table>
+    </div>
+
+    <h4>Relevance in Medical Imaging</h4>
+    <ul>
+      <li><strong>Barium Meal (Upper GI Series):</strong> The patient drinks a contrast agent and X-ray or fluoroscopy images show the stomach outline, rugae and emptying.</li>
+      <li><strong>CT Scan:</strong> Used to examine the stomach wall, nearby organs and complications in the abdomen.</li>
+      <li><strong>Ultrasound and MRI:</strong> Help assess surrounding structures and some stomach conditions without radiation (MRI/ultrasound).</li>
+      <li><strong>Common Conditions Evaluated:</strong> Gastritis, peptic ulcers, hiatus hernia, gastric tumours and delayed gastric emptying.</li>
+    </ul>
+
+    <div class="note">
+      <strong>Summary:</strong> The stomach stores food, mixes it with acid and enzymes, begins protein digestion, and passes chyme to the small intestine in a controlled way.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © 2026 Sonia Rani &nbsp;|&nbsp; SU91-BMITM-F25-044 &nbsp;|&nbsp; BS Medical Imaging Technology
+</footer>
+
+</body>
+</html>
